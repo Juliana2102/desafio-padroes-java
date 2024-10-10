@@ -1,18 +1,45 @@
-## Getting Started
+## Projeto: Padrões de Projeto - Estratégias de Pagamento
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Descrição
 
-## Folder Structure
+Este projeto demonstra a aplicação do padrão de projeto Strategy e do padrão Facade para o processamento de pagamentos em diferentes métodos, como Bitcoin, Cartão de Crédito e PayPal. Ele é dividido em várias classes que representam os diferentes métodos de pagamento e como eles podem ser gerenciados de forma unificada pelo sistema.
 
-The workspace contains two folders by default, where:
+Estrutura do Projeto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O projeto está organizado da seguinte maneira:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+PagamentoBitcoin.java: Implementa o pagamento usando Bitcoin.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+PagamentoCartaoCredito.java: Implementa o pagamento usando Cartão de Crédito.
 
-## Dependency Management
+PagamentoPayPal.java: Implementa o pagamento usando PayPal.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+ProcessadorPagamento.java: Classe responsável por processar o pagamento com a estratégia fornecida.
+
+FacadePagamento.java: Fornece uma interface simples para gerenciar diferentes tipos de pagamento.
+
+Main.java: Ponto de entrada do programa, onde os pagamentos são processados com base na escolha do usuário.
+
+
+Padrões de Projeto Utilizados
+
+Strategy: Cada método de pagamento é uma estratégia diferente implementada de acordo com a interface comum de pagamento.
+
+Facade: Simplifica a interação com os diversos métodos de pagamento, oferecendo uma única interface de processamento.
+
+Exemplo de Uso
+
+No Main.java, o usuário pode escolher entre diferentes formas de pagamento, e o sistema processará o pagamento utilizando a estratégia escolhida. Exemplo de execução:
+
+Escolha o método de pagamento:
+1. Bitcoin
+2. Cartão de Crédito
+3. PayPal
+Opção: 2
+
+Processando pagamento com Cartão de Crédito...
+Pagamento realizado com sucesso!
+
+Tecnologias Utilizadas
+
+Java SE: Linguagem de programação utilizada para implementar o projeto.
