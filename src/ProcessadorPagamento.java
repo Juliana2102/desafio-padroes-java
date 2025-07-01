@@ -2,7 +2,7 @@ public class ProcessadorPagamento {
     private static ProcessadorPagamento instancia;
 
     private ProcessadorPagamento() {
-        // Construtor privado para evitar instanciamento
+      
     }
 
     public static ProcessadorPagamento getInstancia() {
